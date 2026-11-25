@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+<section class="page-heading"><p class="eyebrow">The basics</p><h1>A quick language guide</h1><p>There is no single “best” language. The best choice depends on the problem, the team, and the environment.</p></section>
+<div class="language-grid">
+  <% languageCards.forEach(language => { %>
+    <article class="language-card <%= language.color %>"><div class="code-mark">{ }</div><h2><%= language.name %></h2><p class="tag"><%= language.type %></p><p><%= language.use %>.</p></article>
+  <% }) %>
+</div>
+<section class="split-section"><div><h2>Compiled vs. interpreted</h2><p>Compiled programs are translated before they run. Interpreted programs are commonly read and executed by another program while they run. Modern tools often combine both ideas.</p></div><div class="fact-box"><strong>Student tip</strong><p>Start with one language and practice problem solving. Syntax becomes easier with repetition.</p></div></section>
+<%- include('partials/footer') %>

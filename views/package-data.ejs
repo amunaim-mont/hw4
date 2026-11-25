@@ -1,0 +1,6 @@
+<%- include('partials/header') %>
+<section class="page-heading"><p class="eyebrow">Installed package data</p><h1>Data from a Node package</h1><p>The <code>countries-list</code> package supplies country records. This page reads those records on the server and displays a small sample.</p></section>
+<div class="package-banner"><div class="package-symbol">npm</div><div><h2>countries-list</h2><p>Small, useful country information from an installed Node package.</p></div></div>
+<div class="table-wrap"><table><caption>Sample records from the package</caption><thead><tr><th>Code</th><th>Country</th><th>Currency code</th></tr></thead><tbody><% packageLanguages.forEach(country => { %><tr><td><code><%= country.code %></code></td><td><%= country.name %></td><td><%= country.currency %></td></tr><% }) %></tbody></table></div>
+<p class="source-note">This is actual package data, not a manually typed list. The package is imported at the top of <code>index.mjs</code>.</p>
+<%- include('partials/footer') %>

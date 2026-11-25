@@ -1,0 +1,16 @@
+{
+  "name": "hw1-express-programming-languages",
+  "version": "1.0.0",
+  "description": "A basic Express site about programming languages for HW1 redo.",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs",
+    "dev": "node --watch index.mjs"
+  },
+  "dependencies": {
+    "countries-list": "^3.1.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,7 @@
+<%- include('partials/header') %>
+<section class="page-heading"><p class="eyebrow">Live backend data</p><h1>Web API lab</h1><p>This page gets current repository information from the GitHub REST API in <code>index.mjs</code>.</p></section>
+<% if (error) { %><div class="notice"><%= error %></div><% } else { %>
+<article class="api-card"><div class="api-top"><span class="live-dot"></span><span>Fetched from GitHub</span></div><h2><%= repo.full_name %></h2><p><%= repo.description %></p><div class="stats"><div><strong><%= repo.stargazers_count.toLocaleString() %></strong><span>Stars</span></div><div><strong><%= repo.forks_count.toLocaleString() %></strong><span>Forks</span></div><div><strong><%= repo.open_issues_count.toLocaleString() %></strong><span>Open issues</span></div></div><a class="button" href="<%= repo.html_url %>">View repository →</a></article>
+<% } %>
+<section class="source-note"><h2>Why this counts</h2><p>The server makes the request, receives JSON, and passes selected fields into this EJS view. The browser is not calling the API directly.</p></section>
+<%- include('partials/footer') %>
